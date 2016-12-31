@@ -23,6 +23,9 @@ Classes
             sideAttack[6]
         Methods
             getOwner()
+            getAttach(int i)
+            setAttack(int side, int value)
+
 
     HexBoard
         Represents a hexboard that is responsible for manipulating hexes

@@ -6,3 +6,8 @@ Es recomendable en papel.
 Tutorial actual: 19
 Comienza a desarrollar con el main, y la clase Game.
 
+
+Tutorial 20:
+Se comienza la implementación de la clase hex
+
+Tutorial 21:

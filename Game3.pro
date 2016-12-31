@@ -13,10 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    game.cpp
+    game.cpp \
+    hex.cpp
 
 HEADERS  += \
-    game.h
+    game.h \
+    hex.h
 
 DISTFILES += \
     Analisis.txt \
