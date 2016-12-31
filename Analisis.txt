@@ -1,0 +1,54 @@
+Summary
+-Have a good balance between planning and coding
+-Have a good balance between thinking whether what you want is possible and having
+faith that it indeed is possible
+-Everithing gets easier as you gain experience (design/program as much as possible)
+-Encapsulation refers to the practice of class hiding it's internal information.
+It does this by making the internal attributes/methods private. Practice
+encapsulation as it leads to a class interface that is slimmer and easier to use.
+
+Gameplay
+-Two players, alternatively taking turns, placing hexes onto the board
+-Each side of a hex has it's own "attack value"
+-When a hex is placed, compare it's side to all of it's neighbors, if it's attack
+value is greater, "conquer" the neighbor
+-When the hex board is full, announce the winner (the player with more hexes on
+the board)
+
+Classes
+    Hex
+        Represents a hex
+        Attributes
+            owner
+            sideAttack[6]
+        Methods
+            getOwner()
+
+    HexBoard
+        Represents a hexboard that is responsible for manipulating hexes
+        Think of this as a container for hexes
+        Attributes
+            -list of hexes
+        Methods
+            -getHexes()
+            -placeHexes()
+
+    Game
+        Inherits from QGraphicsView
+        Responsible for managing the "global" aspects of the game
+        Attributes
+            -Scene
+            -hexBoard
+            -whosTurn
+        Methods
+            -start()
+
+    Button
+        Inherits from QGraphicsRectItem
+        Attributes
+            text
+        Methods
+            -onMousePress()
+            -onHoverEventEnter()
+            -onHoverEventLeave()
+            -clicked()

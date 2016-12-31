@@ -1,0 +1,8 @@
+Tut 17 y 18
+Comenzamos un nuevo juego de hexágonos.
+Se explica como realizar un análisis previo del juego.
+Es recomendable en papel.
+
+Tutorial actual: 19
+Comienza a desarrollar con el main, y la clase Game.
+
