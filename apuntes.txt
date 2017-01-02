@@ -11,3 +11,6 @@ Tutorial 20:
 Se comienza la implementación de la clase hex
 
 Tutorial 21:
+Se añade una columna de hexágonos
+
+Tutorial 22:

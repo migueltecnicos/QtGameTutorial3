@@ -3,6 +3,7 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include "hexboard.h"
 
 class Game: public QGraphicsView
 {
@@ -15,7 +16,7 @@ public:
 
     // public attributes
     QGraphicsScene *scene;
-    // TODO HexBoard *hexBoard;
+    HexBoard *hexBoard;
     QString whosTurn;
 };
 

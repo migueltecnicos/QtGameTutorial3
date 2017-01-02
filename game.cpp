@@ -1,5 +1,4 @@
 #include "game.h"
-#include "hex.h"
 
 Game::Game(QWidget *parent)
 {
@@ -19,7 +18,6 @@ Game::Game(QWidget *parent)
 void Game::start()
 {
     // test code TODO remove
-    Hex *hex = new Hex();
-    scene->addItem(hex);
-    hex->setPos(100,100);
+    hexBoard = new HexBoard();
+    hexBoard->placeHexes();
 }
