@@ -13,10 +13,17 @@ QList<Hex *> HexBoard::getHexes()
     return hexes;
 }
 
-void HexBoard::placeHexes()
+void HexBoard::placeHexes(int x, int y, int cols, int rows)
 {
-    //
-    createHexColumn(100,100,5);
+    int X_SHIFT = 82;
+    int Y_SHIFT = 41;
+
+    for (size_t i = 0, n = cols; i < n; ++i)
+    {
+        Y_SHIFT = (i % 2 == 0)? 0: 41;
+
+        createHexColumn(x + X_SHIFT * i, y + Y_SHIFT, rows);
+    }
 }
 
 void HexBoard::createHexColumn(int x, int y, int numOfRows)

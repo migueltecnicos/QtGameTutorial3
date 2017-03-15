@@ -14,3 +14,8 @@ Tutorial 21:
 Se añade una columna de hexágonos
 
 Tutorial 22:
+Se añaden todas las columnas, con las columnas impares desplazadas hacia abajo, construyendo
+correctamente el área de hexágonos
+
+Tutorial 23:
+Se explica la implementación de la clase Button, y se inicia su implementación

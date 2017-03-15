@@ -15,12 +15,14 @@ TEMPLATE = app
 SOURCES += main.cpp \
     game.cpp \
     hex.cpp \
-    hexboard.cpp
+    hexboard.cpp \
+    button.cpp
 
 HEADERS  += \
     game.h \
     hex.h \
-    hexboard.h
+    hexboard.h \
+    button.h
 
 DISTFILES += \
     Analisis.txt \

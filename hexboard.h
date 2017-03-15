@@ -13,7 +13,7 @@ public:
     QList<Hex *> getHexes();
 
     // public methods
-    void placeHexes();
+    void placeHexes(int x, int y, int cols, int rows);
 
 private:
     QList<Hex *> hexes;
