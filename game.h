@@ -14,6 +14,8 @@ public:
 
     // public methods
     void displayMainMenu();
+    QString getWhosTurn();
+    void setWhosTurn(QString player);
 
     // public attributes
     QGraphicsScene *scene;
@@ -22,6 +24,12 @@ public:
 
 public slots:
     void start();
+
+private:
+    void drawPanel(int x, int y, int width, int heigh, QColor color, double opacity);
+    void drawGUI();
+    QString whosTurn_;
+    QGraphicsTextItem *whosTurnText = new QGraphicsTextItem;
 };
 
 #endif // GAME_H

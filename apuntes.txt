@@ -22,3 +22,6 @@ Se explica la implementación de la clase Button, y se inicia su implementación
 
 Tutorial 24:
 Se termina la implementación de Button, y se crea el menú principal
+
+Tutorial 25:
+Se añaden los paneles laterales y los textos

@@ -23,8 +23,48 @@ void Game::start()
     // test code TODO remove
     hexBoard = new HexBoard();
     hexBoard->placeHexes(100, 100, 5, 5);
+    drawGUI();
 }
 
+void Game::drawPanel(int x, int y, int width, int heigh, QColor color, double opacity)
+{
+    // Draws a panel at the specified location with the specified properties
+    QGraphicsRectItem *panel = new QGraphicsRectItem(x, y, width, heigh);
+
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(color);
+    panel->setBrush(brush);
+    panel->setOpacity(opacity); //1-opaco, 0 transparente
+    scene->addItem(panel);
+}
+
+void Game::drawGUI()
+{
+    // draw the left panel
+    drawPanel(0, 0, 150, 768, Qt::darkCyan, 1);
+
+    // draw the rigth panel
+    drawPanel(874, 0, 150, 768, Qt::darkCyan, 1);
+
+    // place player1 text
+    QGraphicsTextItem *p1 = new QGraphicsTextItem("Player 1's Cards: ");
+    p1->setPos(25, 0);
+    scene->addItem(p1);
+
+    // place player2 text
+    QGraphicsTextItem *p2 = new QGraphicsTextItem("Player 2's Cards: ");
+    p2->setPos(875+25, 0);
+    scene->addItem(p2);
+
+    // place whosTurnText
+    whosTurnText = new QGraphicsTextItem();
+    setWhosTurn(QString("PLAYER1"));
+    whosTurnText->setPos(490, 0);
+    scene->addItem(whosTurnText);
+
+
+}
 void Game::displayMainMenu()
 {
     // Create the title text
@@ -52,4 +92,19 @@ void Game::displayMainMenu()
     quitButton->setPos(xPos, yPos);
     connect(quitButton, SIGNAL(clicked()), this, SLOT(close()));
     scene->addItem(quitButton);
+}
+
+QString Game::getWhosTurn()
+{
+    return this->whosTurn_;
+
+}
+
+void Game::setWhosTurn(QString player)
+{
+    whosTurn_ = player;
+
+    // change the QGraphicsTextItem
+    whosTurnText->setPlainText(QString("Turn: ") + whosTurn_);
+
 }
